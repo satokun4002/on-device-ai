@@ -1,0 +1,12 @@
+node_modules/
+dist/
+models/*.onnx
+models/cache/
+.env
+.env.local
+*.log
+.DS_Store
+platforms/web/node_modules
+platforms/electron/node_modules
+platforms/electron/dist
+.vscode/

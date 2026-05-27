@@ -1,0 +1,39 @@
+{
+  "name": "on-device-ai",
+  "version": "0.1.0",
+  "description": "Lightweight on-device AI framework with multi-platform support",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.mjs",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "npm run build && node dist/index.js",
+    "download-models": "node download-models.mjs",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "web": "cd platforms/web && npm start",
+    "node-api": "node dist/platforms/node-api/server.js",
+    "electron": "cd platforms/electron && npm start"
+  },
+  "keywords": [
+    "ai",
+    "on-device",
+    "onnx",
+    "text-generation",
+    "image-recognition",
+    "code-generation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "onnxruntime-node": "^1.19.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11",
+    "ts-node": "^10.9.2"
+  }
+}
