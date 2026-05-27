@@ -1,0 +1,33 @@
+{
+  "name": "on-device-ai",
+  "version": "0.1.0",
+  "description": "Lightweight on-device AI framework with multi-platform support",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.mjs",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "npm run build && node dist/index.js",
+    "download-models": "node download-models.mjs",
+    "test": "node --test",
+    "quick-start": "echo 'Quick setup guide:' && echo '1. npm ci' && echo '2. npm run build' && echo '3. npm run download-models' && echo '4. npm start'"
+  },
+  "keywords": [
+    "ai",
+    "on-device",
+    "onnx",
+    "text-generation",
+    "image-recognition",
+    "code-generation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "onnxruntime-node": "^1.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6"
+  }
+}
